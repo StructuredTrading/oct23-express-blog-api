@@ -6,7 +6,7 @@ const { databaseConnect, databaseClear, databaseClose } = require("./database");
 async function seedUsers () {
 	let userData = [
 		{
-			username: "Sam"
+			username: "sam"
 		},
 		{
 			username: "Ashka"
@@ -51,8 +51,6 @@ async function seedBlogPosts (usersToUse) {
 	console.log(result);
 	return result;
 }
-
-
 
 
 async function seed(){

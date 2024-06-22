@@ -31,7 +31,7 @@ app.get("*", (request, response, next) => {
 
 
 app.use((error, request, response, next) => {
-	response.json({
+	response.status(error.status || 500).json({
 		message: "Error occured!",
 		error: error.message
 	});
@@ -41,5 +41,3 @@ app.use((error, request, response, next) => {
 module.exports = {
 	app
 }
-
-
